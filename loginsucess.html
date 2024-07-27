@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>loginsuccess</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --interval: 0.65s;
+  --duration: calc(var(--interval) * 4);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #131c28;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  font-family: copperplate;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  background-color: #222;
+  z-index: 10;
+}
+
+.sidebar .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar .menu li {
+  margin-bottom: 20px;
+}
+
+.sidebar .menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.sidebar .menu li a:hover {
+  color: #27c05f;
+}
+
+.bouncing-text {
+  font-size: 10vmin;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bouncing-text span {
+  display: inline-block;
+  animation: bounce var(--interval) cubic-bezier(0, 0, 0.2, 1) both infinite;
+}
+
+@keyframes bounce {
+  from, to {
+    transform: translateY(-50%);
+    animation-timing-function: cubic-bezier(0, 0, 1, 0);
+  }
+  50% {
+    transform: none;
+  }
+}
+
+.bouncing-text span:nth-child(1) {
+  animation-delay: calc(var(--interval) * 0);
+}
+
+.bouncing-text span:nth-child(2) {
+  animation-delay: calc(var(--interval) * 1);
+}
+
+.bouncing-text span:nth-child(3) {
+  animation-delay: calc(var(--interval) * 2);
+}
+
+.bouncing-text span:nth-child(4) {
+  animation-delay: calc(var(--interval) * 3);
+}
+
+.bouncing-text span:nth-child(5) {
+  animation-delay: calc(var(--interval) * 4);
+}
+
+.bouncing-text span:nth-child(6) {
+  animation-delay: calc(var(--interval) * 5);
+}
+
+@keyframes color {
+  from, to {
+    color: #2358e6;
+  }
+  25% {
+    color: #e58d2c;
+  }
+  50% {
+    color: #27c05f;
+  }
+  75% {
+    color: #df4b20;
+  }
+}
+
+.bouncing-text span:nth-child(1) {
+  animation-name: color;
+}
+
+.bouncing-text span:nth-child(2) {
+  animation-name: color;
+}
+
+.bouncing-text span:nth-child(3) {
+  animation-name: color;
+}
+
+.bouncing-text span:nth-child(4) {
+  animation-name: color;
+}
+
+.bouncing-text span:nth-child(5) {
+  animation-name: color;
+}
+
+.bouncing-text span:nth-child(6) {
+  animation-name: color;
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+  <ul class="menu">
+    <li><a href="table1.php">Student Info</a></li>
+    <li><a href="l2.html">Company</a></li>
+    <li><a href="l3.html">Highest Package</a></li>
+    <li><a href="l4.html">Average Package</a></li>
+    <li><a href="home.html">Exit</a></li>
+  </ul>
+</div>
+
+<div class="bouncing-text">
+  <span>welcome</span>
+  <span>login</span>
+  <span>sucessfull</span>
+</div>
+
+<script>
+  const sidebar = document.querySelector('.sidebar');
+  const bouncingText = document.querySelector('.bouncing-text');
+
+  function openSidebar() {
+    sidebar.style.width = '500px';
+    bouncingText.style.marginLeft = '200px';
+  }
+
+  function closeSidebar() {
+    sidebar.style.width = '150px';
+    bouncingText.style.marginLeft = '80px';
+  }
+</script>
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+     <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+          <div class="w3-xlarge w3-padding-32">
+               <i class="fa fa-facebook-official w3-hover-opacity"></i>
+               <i class="fa fa-instagram w3-hover-opacity"></i>
+               <i class="fa fa-snapchat w3-hover-opacity"></i>
+               <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+               <i class="fa fa-twitter w3-hover-opacity"></i>
+               <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+          <p><b>@chaitanyavallakatla.All rights reserved.</b></p>
+
+          <!-- Footer end. -->
+     </footer>
+
+</body>
+</html>
+

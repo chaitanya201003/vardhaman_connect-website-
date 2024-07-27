@@ -1,0 +1,70 @@
+<?php
+
+// Define the student information
+$student_info = [
+  [
+    "name" => "John Doe",
+    "id" => 123456789,
+    "company" => "Google",
+    "location" => "Mountain View",
+    "salary" => 100000,
+  ],
+  [
+    "name" => "Jane Doe",
+    "id" => 987654321,
+    "company" => "Facebook",
+    "location" => "Menlo Park",
+    "salary" => 150000,
+  ],
+];
+
+// Create the webpage
+$html = <<<HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Placement Details</title>
+</head>
+<body>
+  <h1>Placement Details</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Salary</th>
+    </tr>
+    <?php foreach ($student_info as $student) { ?>
+      <tr>
+        <td><?php echo $student["name"]; ?></td>
+        <td><?php echo $student["id"]; ?></td>
+        <td><?php echo $student["company"]; ?></td>
+        <td><?php echo $student["location"]; ?></td>
+        <td><?php echo $student["salary"]; ?></td>
+      </tr>
+    <?php } ?>
+  </table>
+  <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+     <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+          <div class="w3-xlarge w3-padding-32">
+               <i class="fa fa-facebook-official w3-hover-opacity"></i>
+               <i class="fa fa-instagram w3-hover-opacity"></i>
+               <i class="fa fa-snapchat w3-hover-opacity"></i>
+               <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+               <i class="fa fa-twitter w3-hover-opacity"></i>
+               <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+          <p><b>@chaitanyavallakatla.All rights reserved.</b></p>
+
+          <!-- Footer end. -->
+     </footer>
+
+</body>
+</html>
+HTML;
+
+// Display the webpage
+echo $html;
+
+?>
